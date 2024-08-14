@@ -1,0 +1,4 @@
+usage:
+    ¬help <command name>                            displays the help message for the given command
+help:
+?this command

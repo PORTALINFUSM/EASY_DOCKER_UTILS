@@ -1,0 +1,4 @@
+usage:
+    ¬stop <project name>                            stops the container and prunes all the containers and images generated from the current project
+help:
+?this command

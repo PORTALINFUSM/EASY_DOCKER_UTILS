@@ -1,0 +1,4 @@
+usage:
+    ¬del <project name>                             deletes the project reference
+help:
+?this command

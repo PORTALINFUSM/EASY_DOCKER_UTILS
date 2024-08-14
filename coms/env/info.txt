@@ -1,0 +1,4 @@
+usage:
+    ¬env <project name>                             creates env file for the current project container
+help:
+?this command

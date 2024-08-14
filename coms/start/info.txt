@@ -1,0 +1,4 @@
+usage:
+    ¬start <project name>                           builds the docker image and runs the container for the current project
+help:
+?this command

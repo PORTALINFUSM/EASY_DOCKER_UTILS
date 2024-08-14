@@ -1,0 +1,4 @@
+usage:
+    ¬prune                                          prunes all the docker system (clears memory)
+help:
+?this command

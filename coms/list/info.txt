@@ -1,0 +1,4 @@
+usage:
+    ¬list <filter>                                  lists all the projects and their states by a given filter (no filter = all projects)
+help:
+?this command

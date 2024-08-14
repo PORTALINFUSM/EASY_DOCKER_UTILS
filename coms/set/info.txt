@@ -1,0 +1,4 @@
+usage:
+    ¬set <path to project folder> <tag name>        sets a reference to the project with a tagname
+help:
+?this command
