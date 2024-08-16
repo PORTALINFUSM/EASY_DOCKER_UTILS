@@ -1,0 +1,1 @@
+sudo docker logs --follow --details $1 &> $2/$1-log.ansi

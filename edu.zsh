@@ -18,4 +18,7 @@ if [ $# == 0 ]; then
 fi
 if [ -d $FW_DIR/coms/$1 ]; then
     bash $FW_DIR/coms/$1/com.zsh ${@:2}
+else
+usage_msg
+exit 1
 fi
