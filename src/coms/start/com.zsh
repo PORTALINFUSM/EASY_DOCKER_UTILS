@@ -29,4 +29,4 @@ if [ $? == 0 ]; then
     echo -e "$CAT\nSTATE=started\nLAST_PID=$PID" &> /tmp/edu/$1.eduf
 fi
 
-bash $FW_DIR/lib/bash/follow_log.zsh $1 $PJ_DIR
+bash $FW_DIR/lib/bash/follow_log.zsh $1 $PJ_DIR $FW_DIR

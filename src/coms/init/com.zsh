@@ -8,7 +8,7 @@ else
     NAME=$1
 fi
 
-sudo echo -e '{
+echo -e '{
     "env": {
         "TEST_VARIABLE": "http://localhost:80"
     },
@@ -16,15 +16,18 @@ sudo echo -e '{
         "3000": "3000"
     }
 }' &> ./docker.env.json
+chmod ugo+rwx ./docker.env.json
 
-sudo echo -e 'FROM ubuntu:latest
+echo -e 'FROM ubuntu:latest
 
 WORKDIR /app
 
 COPY ./ ./
 
 ENTRYPOINT [ "sh", "entrypoint.sh" ]' &> ./Dockerfile
+chmod ugo+rwx ./Dockerfile
 
-sudo echo -e 'printenv' &> ./entrypoint.sh
+echo -e 'printenv' &> ./entrypoint.sh
+chmod ugo+rwx ./entrypoint.sh
 
 sudo bash $FW_DIR/coms/set/com.zsh $(pwd) $NAME

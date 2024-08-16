@@ -1,6 +1,11 @@
 #!/usr/bin/sh
 FW_DIR=$(dirname $(dirname $(cd `dirname $0` && pwd)))
 
+if [ -z $1 ]; then
+    echo -e "no args were given"
+    exit 1
+fi
+
 if ! [ -f /tmp/edu/$1.eduf ]; then
     echo -e "$1 project does not exists"
     exit 1
