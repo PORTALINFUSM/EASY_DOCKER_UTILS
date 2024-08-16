@@ -11,10 +11,10 @@ if [ $? != 0 ]; then
     exit 1
 fi
 
-if [ -f /etc/edu/$2.eduf ]; then
+if [ -f /tmp/edu/$2.eduf ]; then
     echo -e "tag $2 already have a project linked"
     exit 1
 fi
 
-echo -e "PJ_DIR=$PJ_DIR\nSTATE=off\nLAST_PID=none" &> /etc/edu/$2.eduf
+sudo echo -e "PJ_DIR=$PJ_DIR\nSTATE=off\nLAST_PID=none" &> /tmp/edu/$2.eduf
 echo -e "Project linked succesfully to $2"

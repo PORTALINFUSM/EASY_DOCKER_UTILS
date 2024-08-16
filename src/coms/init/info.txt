@@ -1,0 +1,4 @@
+usage:
+    ¬init                                           creates the default files required and sets the project reference
+help:
+?this command

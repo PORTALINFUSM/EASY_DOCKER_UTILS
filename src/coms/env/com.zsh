@@ -6,12 +6,12 @@ if [ $# != 1 ]; then
     exit 1
 fi
 
-if ! [ -f /etc/edu/$1.eduf ]; then
+if ! [ -f /tmp/edu/$1.eduf ]; then
     echo -e "$1 project does not exists"
     exit 1
 fi
 
-source /etc/edu/$1.eduf
+source /tmp/edu/$1.eduf
 
 if [ -f $PJ_DIR/docker.env ]; then
     echo -e "$1 already has a env file"

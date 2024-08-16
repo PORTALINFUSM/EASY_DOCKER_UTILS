@@ -1,0 +1,4 @@
+usage:
+    ¬ps                                             shows the state for all containers
+help:
+?this command
