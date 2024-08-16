@@ -10,6 +10,10 @@ if ! [ -d /tmp/edu ]; then
     sudo mkdir /tmp/edu
 fi
 
-if ! [ $(cat ~/.bashrc | grep "alias edu='bash /usr/local/src/edu/edu.zsh'" | wc -w) == 1 ]; then
+if [ -f ~/.bashrc ] && ! [ $(cat ~/.bashrc | grep "alias edu='bash /usr/local/src/edu/edu.zsh'" | wc -w) == 1 ]; then
     echo -e "alias edu='bash /usr/local/src/edu/edu.zsh'" &>> ~/.bashrc
+fi
+
+if [ -f ~/.zshrc ] && ! [ $(cat ~/.zshrc | grep "alias edu='bash /usr/local/src/edu/edu.zsh'" | wc -w) == 1 ]; then
+    echo -e "alias edu='bash /usr/local/src/edu/edu.zsh'" &>> ~/.zshrc
 fi
