@@ -1,3 +1,4 @@
+#!/usr/bin/sh
 FW_DIR=$(dirname $(dirname $(cd `dirname $0` && pwd)))
 
 if [ $# == 0 ]; then
@@ -6,5 +7,5 @@ if [ $# == 0 ]; then
 fi
 
 for i in $@; do
-    rm -f $FW_DIR/projects/$i.eduf
+    rm -f /etc/edu/$i.eduf
 done

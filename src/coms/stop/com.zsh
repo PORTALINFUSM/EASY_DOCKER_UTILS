@@ -1,11 +1,12 @@
+#!/usr/bin/sh
 FW_DIR=$(dirname $(dirname $(cd `dirname $0` && pwd)))
 
-if ! [ -f $FW_DIR/projects/$1.eduf ]; then
+if ! [ -f /etc/edu/$1.eduf ]; then
     echo -e "$1 project does not exists"
     exit 1
 fi
 
-source $FW_DIR/projects/$1.eduf
+source /etc/edu/$1.eduf
 
 if [ $STATE == "off" ]; then
     echo -e "$1 project is already off"
@@ -21,4 +22,4 @@ sudo docker stop $LAST_PID
 sudo docker container rm $LAST_PID
 sudo docker image rm $1
 
-echo -e "PJ_DIR=$PJ_DIR\nSTATE=off\nLAST_PID=$LAST_PID" &> $FW_DIR/projects/$1.eduf
+echo -e "PJ_DIR=$PJ_DIR\nSTATE=off\nLAST_PID=$LAST_PID" &> /etc/edu/$1.eduf

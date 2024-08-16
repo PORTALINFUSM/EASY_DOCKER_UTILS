@@ -1,3 +1,4 @@
+#!/usr/bin/sh
 FW_DIR=$(dirname $(dirname $(cd `dirname $0` && pwd)))
 
 if [ $# == 0 ]; then

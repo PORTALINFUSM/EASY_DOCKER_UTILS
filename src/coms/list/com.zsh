@@ -1,9 +1,10 @@
+#!/usr/bin/sh
 FW_DIR=$(dirname $(dirname $(cd `dirname $0` && pwd)))
 
 table(){
-    FOLDERS=($(ls $FW_DIR/projects | grep ".eduf"))
+    FOLDERS=($(ls /etc/edu | grep ".eduf"))
     for folder in ${FOLDERS[@]}; do
-        CAT=($(cat $FW_DIR/projects/$folder | grep -v "LAST_PID"))
+        CAT=($(cat /etc/edu/$folder | grep -v "LAST_PID"))
         PJ_DIR=(${CAT[0]//'='/ })
         STATE=(${CAT[1]//'='/ })
         printf "%-20s %-20s %-20s\n" ${folder//'.eduf'/} ${STATE[1]} ${PJ_DIR[1]}
