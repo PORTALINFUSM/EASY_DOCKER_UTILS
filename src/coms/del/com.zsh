@@ -7,5 +7,5 @@ if [ $# == 0 ]; then
 fi
 
 for i in $@; do
-    rm -f /tmp/edu/$i.eduf
+    rm -f $EDUF_DIR/$i.eduf
 done

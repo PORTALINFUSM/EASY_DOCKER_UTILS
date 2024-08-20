@@ -6,8 +6,8 @@ fi
 sudo mkdir /usr/local/src/edu
 sudo cp -rf ./src/* /usr/local/src/edu
 
-if ! [ -d /tmp/edu ]; then
-    sudo mkdir /tmp/edu
+if ! [ -d /home/$USER/.edu ]; then
+    sudo mkdir /home/$USER/.edu
 fi
 
 if [ -f ~/.bashrc ] && ! [ $(cat ~/.bashrc | grep "alias edu='bash /usr/local/src/edu/edu.zsh'" | wc -l) == 1 ]; then

@@ -13,16 +13,12 @@ usage_msg(){
     all_coms
 }
 
-if ! [ -d /tmp/edu ]; then
-    mkdir /tmp/edu
-fi
-
 if [ $# == 0 ]; then
     usage_msg
     exit 0
 fi
 if [ -d $FW_DIR/coms/$1 ]; then
-    sudo bash $FW_DIR/coms/$1/com.zsh ${@:2}
+    sudo EDUF_DIR="/home/$USER/.edu" bash $FW_DIR/coms/$1/com.zsh ${@:2}
 else
 usage_msg
 exit 1
