@@ -13,6 +13,10 @@ usage_msg(){
     all_coms
 }
 
+if ! [ -d /tmp/edu ]; then
+    mkdir /tmp/edu
+fi
+
 if [ $# == 0 ]; then
     usage_msg
     exit 0
